@@ -49,9 +49,9 @@ class SendReceivedTable extends Table
             ->allowEmpty('ID', 'create');
 
         $validator
-            ->integer('ACNT_ID')
-            ->requirePresence('ACNT_ID', 'create')
-            ->notEmpty('ACNT_ID');
+            ->integer('ACCOUNT_ID')
+            ->requirePresence('ACCOUNT_ID', 'create')
+            ->notEmpty('ACCOUNT_ID');
 
         $validator
             ->integer('MAIL_ID')

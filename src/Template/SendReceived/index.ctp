@@ -16,7 +16,7 @@
         <thead>
             <tr>
                 <th scope="col"><?= $this->Paginator->sort('ID') ?></th>
-                <th scope="col"><?= $this->Paginator->sort('ACNT_ID') ?></th>
+                <th scope="col"><?= $this->Paginator->sort('ACCOUNT_ID') ?></th>
                 <th scope="col"><?= $this->Paginator->sort('MAIL_ID') ?></th>
                 <th scope="col"><?= $this->Paginator->sort('SEND_DATE') ?></th>
                 <th scope="col"><?= $this->Paginator->sort('RECEIVED_DATE') ?></th>
@@ -30,7 +30,7 @@
             <?php foreach ($sendReceived as $sendReceived): ?>
             <tr>
                 <td><?= $this->Number->format($sendReceived->ID) ?></td>
-                <td><?= $this->Number->format($sendReceived->ACNT_ID) ?></td>
+                <td><?= $this->Number->format($sendReceived->ACCOUNT_ID) ?></td>
                 <td><?= $this->Number->format($sendReceived->MAIL_ID) ?></td>
                 <td><?= h($sendReceived->SEND_DATE) ?></td>
                 <td><?= h($sendReceived->RECEIVED_DATE) ?></td>

@@ -7,7 +7,7 @@ use Cake\ORM\Entity;
  * SendReceived Entity
  *
  * @property int $ID
- * @property int $ACNT_ID
+ * @property int $ACCOUNT_ID
  * @property int $MAIL_ID
  * @property \Cake\I18n\FrozenTime $SEND_DATE
  * @property \Cake\I18n\FrozenTime $RECEIVED_DATE
@@ -28,7 +28,7 @@ class SendReceived extends Entity
      * @var array
      */
     protected $_accessible = [
-        'ACNT_ID' => true,
+        'ACCOUNT_ID' => true,
         'MAIL_ID' => true,
         'SEND_DATE' => true,
         'RECEIVED_DATE' => true,

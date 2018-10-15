@@ -25,7 +25,7 @@ class SendReceivedFixture extends TestFixture
     // @codingStandardsIgnoreStart
     public $fields = [
         'ID' => ['type' => 'integer', 'length' => 255, 'unsigned' => false, 'null' => false, 'default' => null, 'comment' => '送信履歴ID', 'autoIncrement' => true, 'precision' => null],
-        'ACNT_ID' => ['type' => 'integer', 'length' => 255, 'unsigned' => false, 'null' => false, 'default' => null, 'comment' => 'アカウントID', 'precision' => null, 'autoIncrement' => null],
+        'ACCOUNT_ID' => ['type' => 'integer', 'length' => 255, 'unsigned' => false, 'null' => false, 'default' => null, 'comment' => 'アカウントID', 'precision' => null, 'autoIncrement' => null],
         'MAIL_ID' => ['type' => 'integer', 'length' => 255, 'unsigned' => false, 'null' => false, 'default' => null, 'comment' => 'メールID', 'precision' => null, 'autoIncrement' => null],
         'SEND_DATE' => ['type' => 'datetime', 'length' => null, 'null' => true, 'default' => null, 'comment' => '送信日時', 'precision' => null],
         'RECEIVED_DATE' => ['type' => 'datetime', 'length' => null, 'null' => true, 'default' => null, 'comment' => '受信日時', 'precision' => null],
@@ -52,13 +52,13 @@ class SendReceivedFixture extends TestFixture
         $this->records = [
             [
                 'ID' => 1,
-                'ACNT_ID' => 1,
+                'ACCOUNT_ID' => 1,
                 'MAIL_ID' => 1,
-                'SEND_DATE' => '2018-10-15 08:38:29',
-                'RECEIVED_DATE' => '2018-10-15 08:38:29',
+                'SEND_DATE' => '2018-10-15 08:46:14',
+                'RECEIVED_DATE' => '2018-10-15 08:46:14',
                 'SEND_RECEIVED_FLG' => 1,
                 'DEL_FLG' => 1,
-                'REC_DT' => '2018-10-15 08:38:29'
+                'REC_DT' => '2018-10-15 08:46:14'
             ],
         ];
         parent::init();

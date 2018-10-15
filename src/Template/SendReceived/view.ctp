@@ -21,8 +21,8 @@
             <td><?= $this->Number->format($sendReceived->ID) ?></td>
         </tr>
         <tr>
-            <th scope="row"><?= __('ACNT ID') ?></th>
-            <td><?= $this->Number->format($sendReceived->ACNT_ID) ?></td>
+            <th scope="row"><?= __('ACCOUNT ID') ?></th>
+            <td><?= $this->Number->format($sendReceived->ACCOUNT_ID) ?></td>
         </tr>
         <tr>
             <th scope="row"><?= __('MAIL ID') ?></th>

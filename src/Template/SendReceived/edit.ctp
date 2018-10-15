@@ -21,7 +21,7 @@
     <fieldset>
         <legend><?= __('Edit Send Received') ?></legend>
         <?php
-            echo $this->Form->control('ACNT_ID');
+            echo $this->Form->control('ACCOUNT_ID');
             echo $this->Form->control('MAIL_ID');
             echo $this->Form->control('SEND_DATE', ['empty' => true]);
             echo $this->Form->control('RECEIVED_DATE', ['empty' => true]);
