@@ -42,12 +42,16 @@ class MailController extends AppController
     }
 
     /**
-     * Add method
+     * Send method
      *
      * @return \Cake\Http\Response|null Redirects on successful add, renders view otherwise.
      */
-    public function add()
+    public function send()
     {
+        $this->loadModel('Account');
+        $accounts = $this->Account->find('all',['fields' => ['ID', 'FIRST_NAME']]);
+        $senderNames = $accounts->all();
+        $receiverNames = $accounts->all();
         $mail = $this->Mail->newEntity();
         if ($this->request->is('post')) {
             $mail = $this->Mail->patchEntity($mail, $this->request->getData());
@@ -58,7 +62,7 @@ class MailController extends AppController
             }
             $this->Flash->error(__('The mail could not be saved. Please, try again.'));
         }
-        $this->set(compact('mail'));
+        $this->set(compact('mail','senderNames','receiverNames'));
     }
 
     /**

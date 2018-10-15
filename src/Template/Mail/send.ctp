@@ -13,10 +13,11 @@
 <div class="mail form large-9 medium-8 columns content">
     <?= $this->Form->create($mail) ?>
     <fieldset>
-        <legend><?= __('Add Mail') ?></legend>
+        <legend><?= __('新規メール') ?></legend>
         <?php
-            echo $this->Form->control('SEND_ACNT');
-            echo $this->Form->control('RECEIVED_ACNT');
+            pr($senderNames);
+            echo $this->Form->control('送信者',['values' => $senderNames,'options' => $senderNames]);
+            echo $this->Form->control('receiverNames');
             echo $this->Form->control('SUBJECT');
             echo $this->Form->control('BODY');
             echo $this->Form->control('SEND_DATE');
