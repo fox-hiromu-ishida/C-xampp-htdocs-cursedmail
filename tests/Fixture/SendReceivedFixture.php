@@ -24,13 +24,14 @@ class SendReceivedFixture extends TestFixture
      */
     // @codingStandardsIgnoreStart
     public $fields = [
-        'ID' => ['type' => 'integer', 'length' => 255, 'unsigned' => false, 'null' => false, 'default' => null, 'comment' => '送信履歴ID', 'precision' => null, 'autoIncrement' => null],
+        'ID' => ['type' => 'integer', 'length' => 255, 'unsigned' => false, 'null' => false, 'default' => null, 'comment' => '送信履歴ID', 'autoIncrement' => true, 'precision' => null],
         'ACNT_ID' => ['type' => 'integer', 'length' => 255, 'unsigned' => false, 'null' => false, 'default' => null, 'comment' => 'アカウントID', 'precision' => null, 'autoIncrement' => null],
         'MAIL_ID' => ['type' => 'integer', 'length' => 255, 'unsigned' => false, 'null' => false, 'default' => null, 'comment' => 'メールID', 'precision' => null, 'autoIncrement' => null],
-        'SEND_DATE' => ['type' => 'date', 'length' => null, 'null' => true, 'default' => null, 'comment' => '送信日時', 'precision' => null],
-        'RECEIVED_DATE' => ['type' => 'date', 'length' => null, 'null' => true, 'default' => null, 'comment' => '受信日時', 'precision' => null],
+        'SEND_DATE' => ['type' => 'datetime', 'length' => null, 'null' => true, 'default' => null, 'comment' => '送信日時', 'precision' => null],
+        'RECEIVED_DATE' => ['type' => 'datetime', 'length' => null, 'null' => true, 'default' => null, 'comment' => '受信日時', 'precision' => null],
         'SEND_RECEIVED_FLG' => ['type' => 'integer', 'length' => 1, 'unsigned' => false, 'null' => false, 'default' => null, 'comment' => '送受信フラグ', 'precision' => null, 'autoIncrement' => null],
-        'REC_DT' => ['type' => 'date', 'length' => null, 'null' => false, 'default' => null, 'comment' => '作成日時', 'precision' => null],
+        'DEL_FLG' => ['type' => 'integer', 'length' => 11, 'unsigned' => false, 'null' => false, 'default' => null, 'comment' => '', 'precision' => null, 'autoIncrement' => null],
+        'REC_DT' => ['type' => 'datetime', 'length' => null, 'null' => false, 'default' => null, 'comment' => '作成日時', 'precision' => null],
         '_constraints' => [
             'primary' => ['type' => 'primary', 'columns' => ['ID'], 'length' => []],
         ],
@@ -53,10 +54,11 @@ class SendReceivedFixture extends TestFixture
                 'ID' => 1,
                 'ACNT_ID' => 1,
                 'MAIL_ID' => 1,
-                'SEND_DATE' => '2018-10-15',
-                'RECEIVED_DATE' => '2018-10-15',
+                'SEND_DATE' => '2018-10-15 08:38:29',
+                'RECEIVED_DATE' => '2018-10-15 08:38:29',
                 'SEND_RECEIVED_FLG' => 1,
-                'REC_DT' => '2018-10-15'
+                'DEL_FLG' => 1,
+                'REC_DT' => '2018-10-15 08:38:29'
             ],
         ];
         parent::init();

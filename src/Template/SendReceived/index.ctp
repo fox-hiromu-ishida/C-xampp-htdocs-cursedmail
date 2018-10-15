@@ -21,6 +21,7 @@
                 <th scope="col"><?= $this->Paginator->sort('SEND_DATE') ?></th>
                 <th scope="col"><?= $this->Paginator->sort('RECEIVED_DATE') ?></th>
                 <th scope="col"><?= $this->Paginator->sort('SEND_RECEIVED_FLG') ?></th>
+                <th scope="col"><?= $this->Paginator->sort('DEL_FLG') ?></th>
                 <th scope="col"><?= $this->Paginator->sort('REC_DT') ?></th>
                 <th scope="col" class="actions"><?= __('Actions') ?></th>
             </tr>
@@ -34,6 +35,7 @@
                 <td><?= h($sendReceived->SEND_DATE) ?></td>
                 <td><?= h($sendReceived->RECEIVED_DATE) ?></td>
                 <td><?= $this->Number->format($sendReceived->SEND_RECEIVED_FLG) ?></td>
+                <td><?= $this->Number->format($sendReceived->DEL_FLG) ?></td>
                 <td><?= h($sendReceived->REC_DT) ?></td>
                 <td class="actions">
                     <?= $this->Html->link(__('View'), ['action' => 'view', $sendReceived->ID]) ?>

@@ -67,17 +67,12 @@ class MailTable extends Table
             ->allowEmpty('BODY');
 
         $validator
-            ->date('SEND_DATE')
+            ->dateTime('SEND_DATE')
             ->requirePresence('SEND_DATE', 'create')
             ->notEmpty('SEND_DATE');
 
         $validator
-            ->integer('DEL_FLG')
-            ->requirePresence('DEL_FLG', 'create')
-            ->notEmpty('DEL_FLG');
-
-        $validator
-            ->date('REC_DT')
+            ->dateTime('REC_DT')
             ->requirePresence('REC_DT', 'create')
             ->notEmpty('REC_DT');
 

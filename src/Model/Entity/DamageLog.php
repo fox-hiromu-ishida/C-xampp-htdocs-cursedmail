@@ -11,7 +11,7 @@ use Cake\ORM\Entity;
  * @property int $DF_ACNT_ID
  * @property int $RECEIVED_DMG
  * @property int $MAIL_ID
- * @property \Cake\I18n\FrozenDate $REC_DT
+ * @property \Cake\I18n\FrozenTime $REC_DT
  */
 class DamageLog extends Entity
 {

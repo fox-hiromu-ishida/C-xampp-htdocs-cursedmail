@@ -101,12 +101,12 @@ class AccountTable extends Table
             ->notEmpty('DEL_FLG');
 
         $validator
-            ->date('REC_DT')
+            ->dateTime('REC_DT')
             ->requirePresence('REC_DT', 'create')
             ->notEmpty('REC_DT');
 
         $validator
-            ->date('UPD_DT')
+            ->dateTime('UPD_DT')
             ->requirePresence('UPD_DT', 'create')
             ->notEmpty('UPD_DT');
 

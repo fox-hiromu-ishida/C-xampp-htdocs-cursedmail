@@ -59,11 +59,11 @@ class SendReceivedTable extends Table
             ->notEmpty('MAIL_ID');
 
         $validator
-            ->date('SEND_DATE')
+            ->dateTime('SEND_DATE')
             ->allowEmpty('SEND_DATE');
 
         $validator
-            ->date('RECEIVED_DATE')
+            ->dateTime('RECEIVED_DATE')
             ->allowEmpty('RECEIVED_DATE');
 
         $validator
@@ -72,7 +72,12 @@ class SendReceivedTable extends Table
             ->notEmpty('SEND_RECEIVED_FLG');
 
         $validator
-            ->date('REC_DT')
+            ->integer('DEL_FLG')
+            ->requirePresence('DEL_FLG', 'create')
+            ->notEmpty('DEL_FLG');
+
+        $validator
+            ->dateTime('REC_DT')
             ->requirePresence('REC_DT', 'create')
             ->notEmpty('REC_DT');
 

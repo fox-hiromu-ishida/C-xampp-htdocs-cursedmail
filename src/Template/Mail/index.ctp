@@ -19,7 +19,6 @@
                 <th scope="col"><?= $this->Paginator->sort('SEND_ACNT') ?></th>
                 <th scope="col"><?= $this->Paginator->sort('RECEIVED_ACNT') ?></th>
                 <th scope="col"><?= $this->Paginator->sort('SEND_DATE') ?></th>
-                <th scope="col"><?= $this->Paginator->sort('DEL_FLG') ?></th>
                 <th scope="col"><?= $this->Paginator->sort('REC_DT') ?></th>
                 <th scope="col" class="actions"><?= __('Actions') ?></th>
             </tr>
@@ -31,7 +30,6 @@
                 <td><?= $this->Number->format($mail->SEND_ACNT) ?></td>
                 <td><?= $this->Number->format($mail->RECEIVED_ACNT) ?></td>
                 <td><?= h($mail->SEND_DATE) ?></td>
-                <td><?= $this->Number->format($mail->DEL_FLG) ?></td>
                 <td><?= h($mail->REC_DT) ?></td>
                 <td class="actions">
                     <?= $this->Html->link(__('View'), ['action' => 'view', $mail->ID]) ?>

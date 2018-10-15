@@ -11,9 +11,8 @@ use Cake\ORM\Entity;
  * @property int $RECEIVED_ACNT
  * @property string $SUBJECT
  * @property string $BODY
- * @property \Cake\I18n\FrozenDate $SEND_DATE
- * @property int $DEL_FLG
- * @property \Cake\I18n\FrozenDate $REC_DT
+ * @property \Cake\I18n\FrozenTime $SEND_DATE
+ * @property \Cake\I18n\FrozenTime $REC_DT
  */
 class Mail extends Entity
 {
@@ -33,7 +32,6 @@ class Mail extends Entity
         'SUBJECT' => true,
         'BODY' => true,
         'SEND_DATE' => true,
-        'DEL_FLG' => true,
         'REC_DT' => true
     ];
 }

@@ -69,7 +69,7 @@ class DamageLogTable extends Table
             ->notEmpty('MAIL_ID');
 
         $validator
-            ->date('REC_DT')
+            ->dateTime('REC_DT')
             ->requirePresence('REC_DT', 'create')
             ->notEmpty('REC_DT');
 

@@ -16,8 +16,8 @@ use Cake\ORM\Entity;
  * @property int $HP
  * @property int $AUTH_TYPE
  * @property int $DEL_FLG
- * @property \Cake\I18n\FrozenDate $REC_DT
- * @property \Cake\I18n\FrozenDate $UPD_DT
+ * @property \Cake\I18n\FrozenTime $REC_DT
+ * @property \Cake\I18n\FrozenTime $UPD_DT
  */
 class Account extends Entity
 {

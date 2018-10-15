@@ -33,6 +33,10 @@
             <td><?= $this->Number->format($sendReceived->SEND_RECEIVED_FLG) ?></td>
         </tr>
         <tr>
+            <th scope="row"><?= __('DEL FLG') ?></th>
+            <td><?= $this->Number->format($sendReceived->DEL_FLG) ?></td>
+        </tr>
+        <tr>
             <th scope="row"><?= __('SEND DATE') ?></th>
             <td><?= h($sendReceived->SEND_DATE) ?></td>
         </tr>

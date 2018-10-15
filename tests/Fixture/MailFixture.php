@@ -24,14 +24,13 @@ class MailFixture extends TestFixture
      */
     // @codingStandardsIgnoreStart
     public $fields = [
-        'ID' => ['type' => 'integer', 'length' => 255, 'unsigned' => false, 'null' => false, 'default' => null, 'comment' => 'メールID', 'precision' => null, 'autoIncrement' => null],
+        'ID' => ['type' => 'integer', 'length' => 255, 'unsigned' => false, 'null' => false, 'default' => null, 'comment' => 'メールID', 'autoIncrement' => true, 'precision' => null],
         'SEND_ACNT' => ['type' => 'integer', 'length' => 255, 'unsigned' => false, 'null' => false, 'default' => null, 'comment' => '送信アカウントID', 'precision' => null, 'autoIncrement' => null],
         'RECEIVED_ACNT' => ['type' => 'integer', 'length' => 255, 'unsigned' => false, 'null' => false, 'default' => null, 'comment' => '受信アカウントID', 'precision' => null, 'autoIncrement' => null],
         'SUBJECT' => ['type' => 'text', 'length' => null, 'null' => true, 'default' => null, 'collate' => 'utf8_general_ci', 'comment' => 'タイトル', 'precision' => null],
         'BODY' => ['type' => 'text', 'length' => null, 'null' => true, 'default' => null, 'collate' => 'utf8_general_ci', 'comment' => '本文', 'precision' => null],
-        'SEND_DATE' => ['type' => 'date', 'length' => null, 'null' => false, 'default' => null, 'comment' => '送信日時', 'precision' => null],
-        'DEL_FLG' => ['type' => 'integer', 'length' => 1, 'unsigned' => false, 'null' => false, 'default' => null, 'comment' => 'メール削除フラグ', 'precision' => null, 'autoIncrement' => null],
-        'REC_DT' => ['type' => 'date', 'length' => null, 'null' => false, 'default' => null, 'comment' => '作成日時', 'precision' => null],
+        'SEND_DATE' => ['type' => 'datetime', 'length' => null, 'null' => false, 'default' => null, 'comment' => '送信日時', 'precision' => null],
+        'REC_DT' => ['type' => 'datetime', 'length' => null, 'null' => false, 'default' => null, 'comment' => '作成日時', 'precision' => null],
         '_constraints' => [
             'primary' => ['type' => 'primary', 'columns' => ['ID'], 'length' => []],
         ],
@@ -56,9 +55,8 @@ class MailFixture extends TestFixture
                 'RECEIVED_ACNT' => 1,
                 'SUBJECT' => 'Lorem ipsum dolor sit amet, aliquet feugiat. Convallis morbi fringilla gravida, phasellus feugiat dapibus velit nunc, pulvinar eget sollicitudin venenatis cum nullam, vivamus ut a sed, mollitia lectus. Nulla vestibulum massa neque ut et, id hendrerit sit, feugiat in taciti enim proin nibh, tempor dignissim, rhoncus duis vestibulum nunc mattis convallis.',
                 'BODY' => 'Lorem ipsum dolor sit amet, aliquet feugiat. Convallis morbi fringilla gravida, phasellus feugiat dapibus velit nunc, pulvinar eget sollicitudin venenatis cum nullam, vivamus ut a sed, mollitia lectus. Nulla vestibulum massa neque ut et, id hendrerit sit, feugiat in taciti enim proin nibh, tempor dignissim, rhoncus duis vestibulum nunc mattis convallis.',
-                'SEND_DATE' => '2018-10-15',
-                'DEL_FLG' => 1,
-                'REC_DT' => '2018-10-15'
+                'SEND_DATE' => '2018-10-15 08:38:14',
+                'REC_DT' => '2018-10-15 08:38:14'
             ],
         ];
         parent::init();

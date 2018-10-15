@@ -9,10 +9,11 @@ use Cake\ORM\Entity;
  * @property int $ID
  * @property int $ACNT_ID
  * @property int $MAIL_ID
- * @property \Cake\I18n\FrozenDate $SEND_DATE
- * @property \Cake\I18n\FrozenDate $RECEIVED_DATE
+ * @property \Cake\I18n\FrozenTime $SEND_DATE
+ * @property \Cake\I18n\FrozenTime $RECEIVED_DATE
  * @property int $SEND_RECEIVED_FLG
- * @property \Cake\I18n\FrozenDate $REC_DT
+ * @property int $DEL_FLG
+ * @property \Cake\I18n\FrozenTime $REC_DT
  */
 class SendReceived extends Entity
 {
@@ -32,6 +33,7 @@ class SendReceived extends Entity
         'SEND_DATE' => true,
         'RECEIVED_DATE' => true,
         'SEND_RECEIVED_FLG' => true,
+        'DEL_FLG' => true,
         'REC_DT' => true
     ];
 }

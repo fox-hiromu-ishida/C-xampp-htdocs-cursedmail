@@ -26,7 +26,6 @@
             echo $this->Form->control('SUBJECT');
             echo $this->Form->control('BODY');
             echo $this->Form->control('SEND_DATE');
-            echo $this->Form->control('DEL_FLG');
             echo $this->Form->control('REC_DT');
         ?>
     </fieldset>

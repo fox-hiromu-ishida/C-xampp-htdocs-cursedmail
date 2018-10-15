@@ -24,7 +24,7 @@ class AccountFixture extends TestFixture
      */
     // @codingStandardsIgnoreStart
     public $fields = [
-        'ID' => ['type' => 'integer', 'length' => 255, 'unsigned' => false, 'null' => false, 'default' => null, 'comment' => 'アカウントID', 'precision' => null, 'autoIncrement' => null],
+        'ID' => ['type' => 'integer', 'length' => 255, 'unsigned' => false, 'null' => false, 'default' => null, 'comment' => 'アカウントID', 'autoIncrement' => true, 'precision' => null],
         'FIRST_NAME' => ['type' => 'string', 'length' => 36, 'null' => false, 'default' => null, 'collate' => 'utf8_general_ci', 'comment' => '姓', 'precision' => null, 'fixed' => null],
         'LAST_NAME' => ['type' => 'string', 'length' => 36, 'null' => false, 'default' => null, 'collate' => 'utf8_general_ci', 'comment' => '名', 'precision' => null, 'fixed' => null],
         'FIRST_NAME_RO' => ['type' => 'string', 'length' => 36, 'null' => false, 'default' => null, 'collate' => 'utf8_general_ci', 'comment' => '姓（ローマ字）', 'precision' => null, 'fixed' => null],
@@ -34,8 +34,8 @@ class AccountFixture extends TestFixture
         'HP' => ['type' => 'integer', 'length' => 3, 'unsigned' => false, 'null' => false, 'default' => null, 'comment' => 'アカウントHP', 'precision' => null, 'autoIncrement' => null],
         'AUTH_TYPE' => ['type' => 'integer', 'length' => 1, 'unsigned' => false, 'null' => false, 'default' => null, 'comment' => '権限', 'precision' => null, 'autoIncrement' => null],
         'DEL_FLG' => ['type' => 'integer', 'length' => 1, 'unsigned' => false, 'null' => false, 'default' => null, 'comment' => 'アカウント削除フラグ', 'precision' => null, 'autoIncrement' => null],
-        'REC_DT' => ['type' => 'date', 'length' => null, 'null' => false, 'default' => null, 'comment' => '作成日時', 'precision' => null],
-        'UPD_DT' => ['type' => 'date', 'length' => null, 'null' => false, 'default' => null, 'comment' => '更新日時', 'precision' => null],
+        'REC_DT' => ['type' => 'datetime', 'length' => null, 'null' => false, 'default' => null, 'comment' => '作成日時', 'precision' => null],
+        'UPD_DT' => ['type' => 'datetime', 'length' => null, 'null' => false, 'default' => null, 'comment' => '更新日時', 'precision' => null],
         '_constraints' => [
             'primary' => ['type' => 'primary', 'columns' => ['ID'], 'length' => []],
             'EMAIL' => ['type' => 'unique', 'columns' => ['EMAIL'], 'length' => []],
@@ -66,8 +66,8 @@ class AccountFixture extends TestFixture
                 'HP' => 1,
                 'AUTH_TYPE' => 1,
                 'DEL_FLG' => 1,
-                'REC_DT' => '2018-10-15',
-                'UPD_DT' => '2018-10-15'
+                'REC_DT' => '2018-10-15 08:37:47',
+                'UPD_DT' => '2018-10-15 08:37:47'
             ],
         ];
         parent::init();

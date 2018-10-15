@@ -29,10 +29,6 @@
             <td><?= $this->Number->format($mail->RECEIVED_ACNT) ?></td>
         </tr>
         <tr>
-            <th scope="row"><?= __('DEL FLG') ?></th>
-            <td><?= $this->Number->format($mail->DEL_FLG) ?></td>
-        </tr>
-        <tr>
             <th scope="row"><?= __('SEND DATE') ?></th>
             <td><?= h($mail->SEND_DATE) ?></td>
         </tr>

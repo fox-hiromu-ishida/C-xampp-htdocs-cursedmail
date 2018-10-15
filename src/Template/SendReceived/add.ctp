@@ -20,6 +20,7 @@
             echo $this->Form->control('SEND_DATE', ['empty' => true]);
             echo $this->Form->control('RECEIVED_DATE', ['empty' => true]);
             echo $this->Form->control('SEND_RECEIVED_FLG');
+            echo $this->Form->control('DEL_FLG');
             echo $this->Form->control('REC_DT');
         ?>
     </fieldset>

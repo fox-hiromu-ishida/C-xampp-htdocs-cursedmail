@@ -24,12 +24,12 @@ class DamageLogFixture extends TestFixture
      */
     // @codingStandardsIgnoreStart
     public $fields = [
-        'ID' => ['type' => 'integer', 'length' => 255, 'unsigned' => false, 'null' => false, 'default' => null, 'comment' => 'ダメージログID', 'precision' => null, 'autoIncrement' => null],
+        'ID' => ['type' => 'integer', 'length' => 255, 'unsigned' => false, 'null' => false, 'default' => null, 'comment' => 'ダメージログID', 'autoIncrement' => true, 'precision' => null],
         'AT_ACNT_ID' => ['type' => 'integer', 'length' => 255, 'unsigned' => false, 'null' => false, 'default' => null, 'comment' => '攻撃アカウントID', 'precision' => null, 'autoIncrement' => null],
         'DF_ACNT_ID' => ['type' => 'integer', 'length' => 255, 'unsigned' => false, 'null' => false, 'default' => null, 'comment' => '守備アカウントID', 'precision' => null, 'autoIncrement' => null],
         'RECEIVED_DMG' => ['type' => 'integer', 'length' => 255, 'unsigned' => false, 'null' => false, 'default' => null, 'comment' => 'ダメージ量', 'precision' => null, 'autoIncrement' => null],
         'MAIL_ID' => ['type' => 'integer', 'length' => 255, 'unsigned' => false, 'null' => false, 'default' => null, 'comment' => 'メールID', 'precision' => null, 'autoIncrement' => null],
-        'REC_DT' => ['type' => 'date', 'length' => null, 'null' => false, 'default' => null, 'comment' => '作成日時', 'precision' => null],
+        'REC_DT' => ['type' => 'datetime', 'length' => null, 'null' => false, 'default' => null, 'comment' => '作成日時', 'precision' => null],
         '_constraints' => [
             'primary' => ['type' => 'primary', 'columns' => ['ID'], 'length' => []],
         ],
@@ -54,7 +54,7 @@ class DamageLogFixture extends TestFixture
                 'DF_ACNT_ID' => 1,
                 'RECEIVED_DMG' => 1,
                 'MAIL_ID' => 1,
-                'REC_DT' => '2018-10-15'
+                'REC_DT' => '2018-10-15 08:38:01'
             ],
         ];
         parent::init();
