@@ -27,7 +27,11 @@
                 <td><?= h($mail->SEND_DATE) ?></td>
                 <td><?= h($mail->REC_DT) ?></td>
                 <td class="actions">
-                    <?php echo $this->Html->image('/img/delete.png',['url' => ['action'=>'delete', $mail->ID]], ['confirm' => __('Are you sure you want to delete # {0}?', $mail->ID)]) ?>
+                    <?php echo $this->Form->postLink(
+                        $this->Html->image('/img/delete.png'),
+                            ['action' => 'delete', $mail->ID],
+                            ['confirm' => __('メールを削除してよろしいですか？), 'escape' => false]
+                    ); ?>
                 </td>
             </tr>
             <?php endforeach; ?>
