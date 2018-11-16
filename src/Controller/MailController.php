@@ -37,7 +37,6 @@ class MailController extends AppController
      */
     public function view($id = null)
     {
-        $this->autoLayout = false;
         $mail = $this->Mail->get($id, [
             'contain' => []
         ]);
