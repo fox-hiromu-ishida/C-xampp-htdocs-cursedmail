@@ -30,7 +30,7 @@
                     <?php echo $this->Form->postLink(
                         $this->Html->image('/img/delete.png'),
                             ['action' => 'delete', $mail->ID],
-                            ['confirm' => __('メールを削除してよろしいですか？), 'escape' => false]
+                            ['confirm' => __('メールを削除してよろしいですか？'), 'escape' => false]
                     ); ?>
                 </td>
             </tr>
