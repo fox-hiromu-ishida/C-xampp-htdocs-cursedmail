@@ -19,6 +19,8 @@
     <title><?= $this->fetch('title') ?></title>
 </head>
 <body>
-    <?= $this->fetch('content') ?>
+	<div style="background-color:#000;">
+		<?= $this->fetch('content') ?>	
+	</div>
 </body>
 </html>
