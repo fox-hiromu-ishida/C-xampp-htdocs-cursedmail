@@ -21,6 +21,8 @@ class MailController extends AppController
      */
     public function index()
     {
+        
+        $this->autoLayout = false;
         $mail = $this->paginate($this->Mail);
 
         $this->set(compact('mail'));
