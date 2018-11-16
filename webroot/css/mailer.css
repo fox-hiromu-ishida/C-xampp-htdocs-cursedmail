@@ -1,0 +1,93 @@
+/**
+ * メール一覧
+ */
+.mail-list {
+    height: 100%;
+    background: #000;
+    color: #f00;
+}
+.mail-list table {
+    width: 100%
+}
+
+.mail-list th {
+    color: #fff;
+    padding: 20px;
+}
+.mail-list td {
+    text-align: center;
+    border-top: solid 1px #fff;
+    border-bottom: solid 1px #fff;
+    padding: 5px;
+    color: #fff;
+
+}
+.mail-list a {
+    color: #f00;
+}
+
+
+
+/**
+ * ログイン画面
+ */
+.login-all {
+    height: 100%;
+    background: #000;
+    color: #f00;
+}
+.login-title {
+    width: 400px;
+
+    margin-left: auto;
+    margin-right: auto;
+
+    /*text-align: center;*/
+}
+.login-content h2 {
+    color: #f00;
+}
+
+.login-content {
+    border: 1px;
+    border-color: #fff;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translateY(-50%) translateX(-50%);
+    -webkit- transform: translateY(-50%) translateX(-50%);
+    /*position: static;*/
+}
+.login-form {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.login-form input {
+    background: #555;
+    border: 0px;
+    height: 30px;
+    width: 400px;
+}
+.button-area {
+    border: 1px;
+    margin-left: auto;
+    text-align: right;
+    position: relative;
+}
+
+.submit-button {
+    border-color: #f00;
+    color: #f00;
+}
+
+.button-area a {
+    position: absolute;
+    margin-top: 25px;
+    text-decoration: none;
+}
+
+.button-area img {
+    width: 70px;
+}
