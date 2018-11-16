@@ -38,7 +38,26 @@ class MailController extends AppController
             'contain' => []
         ]);
 
-        $this->set('mail', $mail);
+        // アカウント取得
+        $account = TableRegistry::get('account');
+
+        // 送信者
+        $send_account = $account 
+            ->find()
+            ->select(['id', 'email'])
+            ->where(['id =' => $mail['SEND_ACNT']])
+            ->first();
+        $send_account_mail = $send_account['email'];
+
+        // 受信者
+        $received_account = $account 
+            ->find()
+            ->select(['id', 'email'])
+            ->where(['id =' => $mail['RECEIVED_ACNT']])
+            ->first();
+        $received_account_mail = $received_account['email'];
+
+        $this->set(compact('mail', 'accounts', 'send_account_mail', 'received_account_mail'));
     }
 
     /**
