@@ -20,7 +20,16 @@
 </head>
 <body>
 	<div style="background-color:#000;">
-		<?= $this->fetch('content') ?>	
+		<div style="height:150px; width:100%; background-color:#333;">ヘッダー</div>
+		<div style="height:600px; width:100%; background-color:#333;">
+			<div style="display:inline-block; background-color: #888; width: 15%;">サイドバー</div>
+			<div style="display:inline-block; background-color: #555; width: 85%;">
+				本文
+				<?= $this->fetch('content') ?>	
+			</div>
+		</div>
+		<div style="height:150px; width:100%; background-color:red;">フッター</div>
+		
 	</div>
 </body>
 </html>

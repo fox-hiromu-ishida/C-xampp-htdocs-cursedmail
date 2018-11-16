@@ -25,33 +25,46 @@ $cakeDescription = 'CakePHP: the rapid development php framework';
         <?= $this->fetch('title') ?>
     </title>
     <?= $this->Html->meta('icon') ?>
-
+<!-- 
     <?= $this->Html->css('base.css') ?>
     <?= $this->Html->css('style.css') ?>
-
+ -->
     <?= $this->fetch('meta') ?>
     <?= $this->fetch('css') ?>
     <?= $this->fetch('script') ?>
 </head>
 <body>
-    <nav class="top-bar expanded" data-topbar role="navigation">
+        <div style="background-color:#000;">
+        <div style="height:150px; width:100%; background-color:#333;">
+            <h1><a href=""><?= $this->fetch('title') ?></a></h1>
+        </div>
+        <div style="height:600px; width:100%; background-color:#333;">
+            <div style="float:left; height:100%; background-color: #888; width: 15%;">サイドバー</div>
+            <div style="float:left; height:100%; background-color: #555; width: 85%;">
+                <?= $this->Flash->render() ?>
+                <?= $this->fetch('content') ?>  
+            </div>
+        </div>
+        <div style="height:150px; width:100%; background-color:red;">フッター</div>
+        
+    </div>
+<!--     <nav class="top-bar expanded" data-topbar role="navigation">
         <ul class="title-area large-3 medium-4 columns">
-            <li class="name">
-                <h1><a href=""><?= $this->fetch('title') ?></a></h1>
-            </li>
-        </ul>
-        <div class="top-bar-section">
+            <li class="name"> -->
+                
+<!--             </li>
+        </ul> -->
+<!--         <div class="top-bar-section">
             <ul class="right">
                 <li><a target="_blank" href="https://book.cakephp.org/3.0/">Documentation</a></li>
                 <li><a target="_blank" href="https://api.cakephp.org/3.0/">API</a></li>
             </ul>
         </div>
-    </nav>
-    <?= $this->Flash->render() ?>
-    <div class="container clearfix">
+    </nav> -->
+    <!-- <div class="container clearfix">
         <?= $this->fetch('content') ?>
-    </div>
-    <footer>
-    </footer>
+    </div> -->
+    <!-- <footer>
+    </footer> -->
 </body>
 </html>
