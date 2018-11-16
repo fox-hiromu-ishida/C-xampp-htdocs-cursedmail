@@ -30,41 +30,24 @@ $cakeDescription = 'CakePHP: the rapid development php framework';
     <?= $this->Html->css('style.css') ?>
  -->
     <?= $this->fetch('meta') ?>
-    <?= $this->fetch('css') ?>
+    <!-- <?= $this->fetch('css') ?> -->
     <?= $this->fetch('script') ?>
 </head>
-<body>
-        <div style="background-color:#000;">
-        <div style="height:150px; width:100%; background-color:#333;">
-            <h1><a href=""><?= $this->fetch('title') ?></a></h1>
+<body style="background-color:#000; border:0px; margin:0px; color:#FFF;">
+    <div style="background-color:#000; border:0px; margin:0px; ">
+        <div style="height:75px; width:100%; background-color:#000; border:0px; margin:0px;">
+            <h1><a href="" style="color:red; text-decoration: none;"><img src="https://3.bp.blogspot.com/-YRHyt5Fdbvo/VxC3Vo3ZjmI/AAAAAAAA534/pXWlbejfjT0DkorPmN5W9-5h_wqIrXHiQCLcB/s800/waraningyou.png" height="50px" width="50px">呪いのメール</a></h1>
         </div>
-        <div style="height:600px; width:100%; background-color:#333;">
-            <div style="float:left; height:100%; background-color: #888; width: 15%;">サイドバー</div>
-            <div style="float:left; height:100%; background-color: #555; width: 85%;">
+        <div style="height:580px; width:100%; background-color:#000; border:0px; margin:0px;">
+            <div style="float:left; height:100%; background-color: #000; width: 15%; border:0px; margin:0px;">サイドバー</div>
+            <div style="float:left; height:100%; background-color: #000; width: 85%; border:0px; margin:0px;">
                 <?= $this->Flash->render() ?>
                 <?= $this->fetch('content') ?>  
             </div>
         </div>
-        <div style="height:150px; width:100%; background-color:red;">フッター</div>
+        <div style="height:75px; width:100%; background-color:#000; border:0px; margin:0px;">フッター</div>
         
     </div>
-<!--     <nav class="top-bar expanded" data-topbar role="navigation">
-        <ul class="title-area large-3 medium-4 columns">
-            <li class="name"> -->
-                
-<!--             </li>
-        </ul> -->
-<!--         <div class="top-bar-section">
-            <ul class="right">
-                <li><a target="_blank" href="https://book.cakephp.org/3.0/">Documentation</a></li>
-                <li><a target="_blank" href="https://api.cakephp.org/3.0/">API</a></li>
-            </ul>
-        </div>
-    </nav> -->
-    <!-- <div class="container clearfix">
-        <?= $this->fetch('content') ?>
-    </div> -->
-    <!-- <footer>
-    </footer> -->
+
 </body>
 </html>
