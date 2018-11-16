@@ -4,37 +4,30 @@
  * @var \App\Model\Entity\Mail[]|\Cake\Collection\CollectionInterface $mail
  */
 ?>
-<nav class="large-3 medium-4 columns" id="actions-sidebar">
-    <ul class="side-nav">
-        <li class="heading"><?= __('Actions') ?></li>
-        <li><?= $this->Html->link(__('New Mail'), ['action' => 'add']) ?></li>
-    </ul>
-</nav>
+<?php echo $this->Html->css('mailer'); ?>
+<div class="mail-list">
 <div class="mail index large-9 medium-8 columns content">
-    <h3><?= __('Mail') ?></h3>
     <table cellpadding="0" cellspacing="0">
         <thead>
             <tr>
-                <th scope="col"><?= $this->Paginator->sort('ID') ?></th>
-                <th scope="col"><?= $this->Paginator->sort('SEND_ACNT') ?></th>
-                <th scope="col"><?= $this->Paginator->sort('RECEIVED_ACNT') ?></th>
-                <th scope="col"><?= $this->Paginator->sort('SEND_DATE') ?></th>
-                <th scope="col"><?= $this->Paginator->sort('REC_DT') ?></th>
-                <th scope="col" class="actions"><?= __('Actions') ?></th>
+                <th scope="col">送信者</th>
+                <th scope="col">受信者</th>
+                <th scope="col">件名</th>
+                <th scope="col">送信日時</th>
+                <th scope="col">作成日時</th>
+                <th scope="col" class="actions">削除</th>
             </tr>
         </thead>
         <tbody>
             <?php foreach ($mail as $mail): ?>
             <tr>
-                <td><?= $this->Number->format($mail->ID) ?></td>
                 <td><?= $this->Number->format($mail->SEND_ACNT) ?></td>
                 <td><?= $this->Number->format($mail->RECEIVED_ACNT) ?></td>
+                <td><?= $this->Html->link(__($mail->SUBJECT), ['action' => 'view', $mail->ID]) ?>
                 <td><?= h($mail->SEND_DATE) ?></td>
                 <td><?= h($mail->REC_DT) ?></td>
                 <td class="actions">
-                    <?= $this->Html->link(__('View'), ['action' => 'view', $mail->ID]) ?>
-                    <?= $this->Html->link(__('Edit'), ['action' => 'edit', $mail->ID]) ?>
-                    <?= $this->Form->postLink(__('Delete'), ['action' => 'delete', $mail->ID], ['confirm' => __('Are you sure you want to delete # {0}?', $mail->ID)]) ?>
+                    <?php echo $this->Html->image('/img/delete.png',['url' => ['action'=>'delete', $mail->ID]], ['confirm' => __('Are you sure you want to delete # {0}?', $mail->ID)]) ?>
                 </td>
             </tr>
             <?php endforeach; ?>
@@ -42,12 +35,13 @@
     </table>
     <div class="paginator">
         <ul class="pagination">
-            <?= $this->Paginator->first('<< ' . __('first')) ?>
-            <?= $this->Paginator->prev('< ' . __('previous')) ?>
+            <?= $this->Paginator->first('<< ' . __('最初へ')) ?>
+            <?= $this->Paginator->prev('< ' . __('前へ')) ?>
             <?= $this->Paginator->numbers() ?>
-            <?= $this->Paginator->next(__('next') . ' >') ?>
-            <?= $this->Paginator->last(__('last') . ' >>') ?>
+            <?= $this->Paginator->next(__('次へ') . ' >') ?>
+            <?= $this->Paginator->last(__('最後へ') . ' >>') ?>
         </ul>
-        <p><?= $this->Paginator->counter(['format' => __('Page {{page}} of {{pages}}, showing {{current}} record(s) out of {{count}} total')]) ?></p>
+        <p><?= $this->Paginator->counter(['format' => __(' {{pages}} ページ中 {{page}} ページ')]) ?></p>
     </div>
+</div>
 </div>

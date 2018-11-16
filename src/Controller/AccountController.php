@@ -12,7 +12,14 @@ use App\Controller\AppController;
  */
 class AccountController extends AppController
 {
-
+    /**
+     * ログイン画面
+     */
+    public function login()
+    {
+        $this->autoLayout = false;
+    }
+    
     /**
      * Index method
      *
